@@ -1,0 +1,58 @@
+{
+  "name": "Ticket automation",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "dba3d9ca-e45e-4bcb-8930-94d8d5ca7d89",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "107f10c9-edef-4264-93fc-d562c803ee29",
+      "name": "Webhook",
+      "webhookId": "dba3d9ca-e45e-4bcb-8930-94d8d5ca7d89"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Example Function Node\nconst validItems = [];\n// extensions autorisées\nconst allowedExtensions = ['pdf', 'jpg', 'jpeg', 'png', 'gif'];\n\nfor (const item of items) {\n  const fileField = item.json[\"body\"][\"items\"][0][\"Fichier\"];\n\n  if (fileField.length !== 1) {\n  console.log(\"Mauvais nombre de fichiers :\", fileField.length);\n  continue;\n  }\n  \n  const name = fileField[0][\"name\"]\n  const ext = name.split('.').pop().toLowerCase();\n\n  if (!allowedExtensions.includes(ext)) {\n  console.log(\"Mauvaise extension de fichier.\");\n  continue;\n  }\n  validItems.push(item);\n}\n\nreturn validItems;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "a7ab3f8e-6f4f-4b41-950b-c9e7d17515c5",
+      "name": "Code in JavaScript"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f3528590-66b2-4295-8daa-0861a82b0477",
+  "meta": {
+    "instanceId": "b7b69cbf36b2c42c489fdf2dc9b7bc0648299b9a73d7661a5a3da784816d3a6e"
+  },
+  "id": "pOn2bhgC1Se9lYg9",
+  "tags": []
+}
