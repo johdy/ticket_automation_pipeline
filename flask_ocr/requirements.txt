@@ -1,0 +1,6 @@
+Flask
+pillow
+pytesseract
+transformers
+sentencepiece
+protobuf

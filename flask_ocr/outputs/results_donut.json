@@ -1,0 +1,57 @@
+[
+    {
+        "filename": "./dataset/82573104.png",
+        "Q&A": [
+            {
+                "Get who this is from": "david h. remes"
+            },
+            {
+                "Get who this is to": "haney h. bell, esq."
+            }
+        ]
+    },
+    {
+        "filename": "./dataset/83443897.png",
+        "Q&A": [
+            {
+                "Get who this is from": "andy zausner and rob mangas"
+            },
+            {
+                "Get who this is to": "january 11, 1999"
+            }
+        ]
+    },
+    {
+        "filename": "./dataset/82250337_0338.png",
+        "Q&A": [
+            {
+                "Get who this is from": "d. j. landro"
+            },
+            {
+                "Get who this is to": "sam zolot"
+            }
+        ]
+    },
+    {
+        "filename": "./dataset/83594639.png",
+        "Q&A": [
+            {
+                "Get who this is from": "\"jj\" klein"
+            },
+            {
+                "Get who this is to": "ron milstein"
+            }
+        ]
+    },
+    {
+        "filename": "./dataset/82253058_3059.png",
+        "Q&A": [
+            {
+                "Get who this is from": "r.g. ryan"
+            },
+            {
+                "Get who this is to": "mrs. k. a. sparrow"
+            }
+        ]
+    }
+]
